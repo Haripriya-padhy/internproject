@@ -1,0 +1,186 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .step-indicator {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .step-circle.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .step-circle.completed {
+    background-color: #8BC34A;
+    color: white;
+  }
+  
+  .form-step {
+    padding: 20px;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-field input.error {
+    border-color: #f44336;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .required {
+    color: #f44336;
+    margin-left: 5px;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .btn-submit {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0b7dda;
+  }
+  
+  .btn-submit:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .confirmation-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .confirmation-section h3 {
+    margin-top: 0;
+    color: #4CAF50;
+  }
+  
+  /* Animation for step transitions */
+  .form-step {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 15px;
+    }
+    
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+    
+    .form-navigation {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  }
